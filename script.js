@@ -1,7 +1,7 @@
 // Game constants
 const WORD_LENGTH = 7;
 const MAX_ATTEMPTS = 6;
-const WORD_LIST_URL = 'words.txt';
+const WORD_LIST_URL = 'https://gist.githubusercontent.com/kajoox/975c4c851f15126bba1d30c6104a2a65/raw/2080af9dc0a28dec1d19978c086abf11b1635df3/words.txt';
 
 // Game state
 class GameState {
@@ -88,7 +88,7 @@ class WordleGame {
             console.error('Error loading word list:', error);
             // Fallback to a small set of words if the fetch fails
             this.words = [
-                "MINSUNG", "BROXADA", "CAITLYN", "GENSHIN", "SAMBUCK"
+                "abaldil, acutula"
             ];
         }
     }
@@ -367,7 +367,7 @@ class WordleGame {
     }
 
     shareResult() {
-        let shareText = `Wordle | Termooo @vncsmnl ${this.state.stats.gamesPlayed} ${this.state.attempts.length}/${MAX_ATTEMPTS}\n\n`;
+        let shareText = `HEADSPACEDLE ${this.state.stats.gamesPlayed} ${this.state.attempts.length}/${MAX_ATTEMPTS}\n\n`;
 
         for (let i = 0; i < this.state.attempts.length; i++) {
             const rowTiles = document.querySelectorAll(`#board div:nth-child(${i + 1}) div`);
@@ -381,11 +381,11 @@ class WordleGame {
             shareText += '\n';
         }
 
-        shareText += '\nJogue em: https://vinicius.is-a.dev/wordle';
+        shareText += '\nJogue em: https://kajoox.github.io/headspace-dle/';
 
         if (navigator.share) {
             navigator.share({
-                title: 'Wordle | Termooo @vncsmnl  ',
+                title: 'Headspacedle  ',
                 text: shareText,
             }).catch(console.error);
         } else {
