@@ -1,7 +1,7 @@
 // Game constants
-const WORD_LENGTH = 6;
+const WORD_LENGTH = 7;
 const MAX_ATTEMPTS = 6;
-const WORD_LIST_URL = 'https://gist.githubusercontent.com/vncsmnl/25e7c165da276405af8ca4e1c8e17806/raw/aaeb75a75ff48ae8cd8888bae031dcb9884cddaa/wordlist';
+const WORD_LIST_URL = 'words.txt';
 
 // Game state
 class GameState {
@@ -88,7 +88,7 @@ class WordleGame {
             console.error('Error loading word list:', error);
             // Fallback to a small set of words if the fetch fails
             this.words = [
-                "ABRIR", "ACASO", "ACIMA", "AGORA", "AINDA", "ALGUM", "AMIGO", "ANTES", "APENAS", "APOIO"
+                "MINSUNG", "BROXADA", "CAITLYN", "GENSHIN", "SAMBUCK"
             ];
         }
     }
