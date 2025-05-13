@@ -1,5 +1,5 @@
 // Game constants
-const WORD_LENGTH = 5;
+const WORD_LENGTH = 6;
 const MAX_ATTEMPTS = 6;
 const WORD_LIST_URL = 'https://gist.githubusercontent.com/vncsmnl/25e7c165da276405af8ca4e1c8e17806/raw/aaeb75a75ff48ae8cd8888bae031dcb9884cddaa/wordlist';
 
